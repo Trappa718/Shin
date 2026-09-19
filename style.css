@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+
+    --background: #f7f7f5;
+    --white: #ffffff;
+
+    --black: #171717;
+    --gray: #777773;
+    --light-gray: #e7e7e3;
+    --soft-gray: #f0f0ed;
+
+    --orange: #e45b3f;
+    --orange-light: #fff0ec;
+
+    --radius: 24px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--background);
+
+    color: var(--black);
+
+    font-family:
+        "Manrope",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.page {
+
+    width: min(100%, 760px);
+
+    margin: auto;
+
+    padding:
+        18px
+        18px
+        35px;
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.topbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        5px
+        2px
+        22px;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 10px;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+}
+
+
+.brand {
+    color: #333;
+}
+
+
+.status {
+
+    color: #8a8a86;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.status span {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #55a56b;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    background: var(--white);
+
+    border: 1px solid var(--light-gray);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 16px 50px rgba(0,0,0,.045);
+}
+
+
+.photo-wrap {
+
+    aspect-ratio: 1 / .88;
+
+    background: #fff;
+
+    overflow: hidden;
+}
+
+
+.pet-photo {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    mix-blend-mode: multiply;
+}
+
+
+.hero-copy {
+
+    padding:
+        25px
+        24px
+        28px;
+}
+
+
+.eyebrow {
+
+    margin-bottom: 9px;
+
+    color: var(--gray);
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-size: clamp(48px, 13vw, 72px);
+
+    line-height: .95;
+
+    letter-spacing: -.06em;
+
+    font-weight: 800;
+}
+
+
+.subtitle {
+
+    margin: 13px 0 0;
+
+    color: #656561;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.subtitle em {
+    color: #292925;
+}
+
+
+/* =========================
+   FACTS
+========================= */
+
+.facts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin: 12px 0;
+
+    background: var(--light-gray);
+
+    border:
+        1px solid
+        var(--light-gray);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+}
+
+
+.fact {
+
+    min-height: 105px;
+
+    padding: 17px;
+
+    background: var(--white);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.fact span,
+.small-info span {
+
+    color: #8b8b86;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 9px;
+
+    line-height: 1.2;
+
+    letter-spacing: .07em;
+
+    text-transform: uppercase;
+}
+
+
+.fact strong {
+
+    font-size: 14px;
+
+    line-height: 1.25;
+
+    letter-spacing: -.02em;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+
+    margin-top: 12px;
+
+    padding: 23px;
+
+    background: var(--white);
+
+    border:
+        1px solid
+        var(--light-gray);
+
+    border-radius: var(--radius);
+}
+
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 18px;
+}
+
+
+h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    line-height: 1.05;
+
+    letter-spacing: -.04em;
+}
+
+
+.badge {
+
+    padding:
+        7px
+        10px;
+
+    border:
+        1px solid
+        #d8d8d3;
+
+    border-radius: 999px;
+
+    color: #666661;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.description {
+
+    margin:
+        20px
+        0
+        18px;
+
+    color: #555550;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.tags span {
+
+    padding:
+        8px
+        10px;
+
+    background: var(--soft-gray);
+
+    border-radius: 999px;
+
+    color: #5e5e59;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   FEEDING
+========================= */
+
+.next-feed {
+
+    text-align: right;
+}
+
+
+.next-feed span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #999994;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+}
+
+
+.next-feed strong {
+    font-size: 12px;
+}
+
+
+/* =========================
+   CALENDAR
+========================= */
+
+.calendar {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border:
+        1px solid
+        var(--light-gray);
+
+    border-radius: 19px;
+}
+
+
+.calendar-header {
+
+    display: grid;
+
+    grid-template-columns:
+        36px
+        1fr
+        36px;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.calendar-header button {
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--soft-gray);
+
+    color: var(--black);
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+.calendar-header h3 {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+.weekdays,
+.calendar-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 4px;
+}
+
+
+.weekdays span {
+
+    padding:
+        4px
+        0
+        7px;
+
+    color: #a0a09a;
+
+    text-align: center;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 8px;
+}
+
+
+.day {
+
+    position: relative;
+
+    min-height: 43px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 12px;
+
+    color: #44443f;
+
+    font-size: 11px;
+}
+
+
+.day.empty {
+    visibility: hidden;
+}
+
+
+.day.today {
+
+    outline:
+        1px solid
+        #cfcfca;
+
+    outline-offset: -1px;
+}
+
+
+.day.feeding {
+
+    background: var(--orange-light);
+
+    color: #c9432a;
+
+    font-weight: 800;
+}
+
+
+.day.feeding::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 5px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+}
+
+
+.day.today.feeding {
+
+    outline-color:
+        var(--orange);
+}
+
+
+/* =========================
+   LEGEND
+========================= */
+
+.legend {
+
+    display: flex;
+
+    gap: 18px;
+
+    padding:
+        15px
+        3px
+        1px;
+
+    color: #8a8a84;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .05em;
+}
+
+
+.legend div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.feeding-dot,
+.today-dot {
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+}
+
+
+.feeding-dot {
+    background: var(--orange);
+}
+
+
+.today-dot {
+    background: #c8c8c2;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.feeding-note {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 12px;
+
+    padding: 14px;
+
+    background: #f8f8f6;
+
+    border-radius: 16px;
+}
+
+
+.note-icon {
+
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--light-gray);
+
+    border-radius: 50%;
+}
+
+
+.feeding-note strong {
+    font-size: 11px;
+}
+
+
+.feeding-note p {
+
+    margin:
+        4px
+        0
+        0;
+
+    color: #888882;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================
+   SMALL INFO
+========================= */
+
+.small-info {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+.small-info > div {
+
+    padding: 16px;
+
+    background: var(--white);
+
+    border:
+        1px solid
+        var(--light-gray);
+
+    border-radius: 18px;
+}
+
+
+.small-info strong {
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding:
+        24px
+        3px
+        0;
+
+    color: #aaa9a3;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .08em;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 640px) {
+
+    .page {
+
+        padding:
+            30px
+            24px
+            50px;
+    }
+
+
+    .hero {
+
+        display: grid;
+
+        grid-template-columns:
+            1.05fr
+            .95fr;
+    }
+
+
+    .photo-wrap {
+
+        min-height: 430px;
+
+        aspect-ratio: auto;
+    }
+
+
+    .hero-copy {
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-end;
+
+        padding: 34px;
+    }
+
+
+    .facts {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+
+    .fact {
+
+        min-height: 125px;
+    }
+
+}
